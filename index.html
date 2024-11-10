@@ -72,9 +72,9 @@
           let name = array[index];
           document.getElementById('b'+index).innerHTML = index;
           document.getElementById('c'+index).innerHTML = name;
-          p = prompt(`Displaying ${name}. <br>Would you like to make another selection y/n?  `);
+          p = prompt(`Displaying ${name}. \nWould you like to make another selection y/n?  `);
         }else{
-          p = prompt(`That Entry is not in the database. <br>Would you like to make another selection y/n?  `);
+          p = prompt(`That Entry is not in the database. \nWould you like to make another selection y/n?  `);
         }
         if(p==='y')loop2();
       }
