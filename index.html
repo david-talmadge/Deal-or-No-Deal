@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="css/style.css" rel="stylesheet" type="text/css">
-    <title>Calculator</title>
+    <title>Contacts</title>
   </head>
   <body>
     <div class="wrapper">
@@ -74,7 +74,7 @@
           document.getElementById('c'+index).innerHTML = name;
           p = prompt(`Displaying ${name}. <br>Would you like to make another selection y/n?  `);
         }else{
-          p = prompt(`That entry is not in the database. <br>Would you like to make another selection y/n?  `);
+          p = prompt(`That Entry is not in the database. <br>Would you like to make another selection y/n?  `);
         }
         if(p==='y')loop2();
       }
