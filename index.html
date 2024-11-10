@@ -21,79 +21,62 @@
         <p id="a2">Number</p>
       </div>
       <div class="box3">
-        <p id="b1"></p>
+        <p id="b0"></p>
       </div>
       <div class="box4">
-        <p id="b2"></p>
+        <p id="c0"></p>
       </div>
       <div class="box5">
-        <p id="c1"></p>
+        <p id="b1"></p>
       </div>
       <div class="box6">
-        <p id="c2"></p>
+        <p id="c1"></p>
       </div>
       <div class="box7">
-        <p id="d1"></p>
+        <p id="b2"></p>
       </div>
       <div class="box8">
-        <p id="d2"></p>
+        <p id="c2"></p>
       </div>
       <div class="box9">
-        <p id="e1"></p>
+        <p id="b3"></p>
       </div>
       <div class="box10">
-        <p id="e2"></p>
+        <p id="c3"></p>
       </div>
       <div class="box11">
-        <p id="f1"></p>
+        <p id="b4"></p>
       </div>
       <div class="box12">
-        <p id="f2"></p>
+        <p id="c4"></p>
+      </div>
+      <div class="box13">
+        <p id="b5"></p>
+      </div>
+      <div class="box14">
+        <p id="c5"></p>
       </div>
       <div class="boxEnd">
         <p><a href="index.html">Back to the Main Page</a>  <span style="float:right;">This page created as academic activity only.</span></p>
       </div>
     </div>
     <script>
-      var array = new Array();
+      var array = ["Arnold", "Sly", "Dwayne", "Vin", "JCVD", "Steven"];
       loop1();
-      alert('Reload page to perform calculations. Goodbye.');
+      alert('Reload page to perform . Goodbye.');
       
       function loop1(){
-        loop2();
-        let more = prompt(`You entered `+array.length+` numbers, are there more y/n ? `);
-        if(more==='y')loop2();
-        let result2 = calc();
-        let p = prompt(`You entered `+array.length+` numbers. Your answer is ${result2}. Would you like to perform another calculation y/n ? `);
-        console.log(result2);
-        if(p==='y'){
-          array = [];
-          loop1();
+        let index = prompt('Please enter an entry number. ');
+        let p ='';
+        if(index<array.length){
+          let name = array[index];
+          document.getElementById('b'+index).innerHTML = index;
+          document.getElementById('c'+index).innerHTML = name;
+          p = prompt(`Displaying ${name}. <br>Would you like to make another selection y/n?  `);
+        }else{
+          p = prompt(`That entry is not in the database. <br>Would you like to make another selection y/n?  `);
         }
-      }
-      function loop2(){
-        let num1 = prompt('Welcome to the calculator. Please enter a number. ');
-        array.push(num1);
-        let p = prompt(`You entered ${num1}. Enter another y/n? `);
         if(p==='y')loop2();
-      }
-      function calc(){
-        let opp=prompt(`What operation would you like to perform +, -, *, / ? `);
-        let result1=0;
-        for(let i=0;i<array.length;i++){
-          if(i===0){
-            result1 = parseInt(array[i]);
-          }else{
-            if(opp==='+') result1 += parseInt(array[i]);
-            if(opp==='-') result1 -= parseInt(array[i]);
-            if(opp==='*') result1 *= parseInt(array[i]);
-            if(opp==='/'){
-               if(array.length>2) alert('Cannot use more than 2 numbers for division.');
-               if(array.length===2) result1 /= parseInt(array[i]);
-            }
-          }
-        }
-        return result1;
       }
     </script>
   </body>
