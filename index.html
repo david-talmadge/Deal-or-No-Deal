@@ -1,1 +1,101 @@
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit-no">
+    <meta name="author" content="David Talmadge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>Calculator</title>
+  </head>
+  <body>
+    <script>
+      var array = new Array();
+      loop1();
+      alert('Reload page to perform calculations. Goodbye.');
+      
+      function loop1(){
+        loop2();
+        let more = prompt(`You entered `+array.length+` numbers, are there more y/n ? `);
+        if(more==='y')loop2();
+        let result2 = calc();
+        let p = prompt(`You entered `+array.length+` numbers. Your answer is ${result2}. Would you like to perform another calculation y/n ? `);
+        console.log(result2);
+        if(p==='y'){
+          array = [];
+          loop1();
+        }
+      }
+      function loop2(){
+        let num1 = prompt('Welcome to the calculator. Please enter a number. ');
+        array.push(num1);
+        let p = prompt(`You entered ${num1}. Enter another y/n? `);
+        if(p==='y')loop2();
+      }
+      function calc(){
+        let opp=prompt(`What operation would you like to perform +, -, *, / ? `);
+        let result1=0;
+        for(let i=0;i<array.length;i++){
+          if(i===0){
+            result1 = parseInt(array[i]);
+          }else{
+            if(opp==='+') result1 += parseInt(array[i]);
+            if(opp==='-') result1 -= parseInt(array[i]);
+            if(opp==='*') result1 *= parseInt(array[i]);
+            if(opp==='/'){
+               if(array.length>2) alert('Cannot use more than 2 numbers for division.');
+               if(array.length===2) result1 /= parseInt(array[i]);
+            }
+          }
+        }
+        return result1;
+      }
+    </script>
+    
+    <div class="wrapper">
+      <div class="boxStart">
+        <p id="start"></p>
+      </div>
+      <div class="box1">
+        <p id="a1"></p>
+      </div>
+      <div class="box2">
+        <p id="a2"></p>
+      </div>
+      <div class="box3">
+        <p id="b1"></p>
+      </div>
+      <div class="box4">
+        <p id="b2"></p>
+      </div>
+      <div class="box5">
+        <p id="c1"></p>
+      </div>
+      <div class="box6">
+        <p id="c2"></p>
+      </div>
+      <div class="box7">
+        <p id="d1"></p>
+      </div>
+      <div class="box8">
+        <p id="d2"></p>
+      </div>
+      <div class="box9">
+        <p id="e1"></p>
+      </div>
+      <div class="box10">
+        <p id="e2"></p>
+      </div>
+      <div class="box11">
+        <p id="f1"></p>
+      </div>
+      <div class="box12">
+        <p id="f2"></p>
+      </div>
+      <div class="boxEnd">
+        <p><a href="index.html">Back to the Main Page</a>  <span style="float:right;">This page created as academic activity only.</span></p>
+      </div>
+    </div>
+  </body>
+</html>
