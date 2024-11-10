@@ -10,49 +10,6 @@
     <title>Calculator</title>
   </head>
   <body>
-    <script>
-      var array = new Array();
-      loop1();
-      alert('Reload page to perform calculations. Goodbye.');
-      
-      function loop1(){
-        loop2();
-        let more = prompt(`You entered `+array.length+` numbers, are there more y/n ? `);
-        if(more==='y')loop2();
-        let result2 = calc();
-        let p = prompt(`You entered `+array.length+` numbers. Your answer is ${result2}. Would you like to perform another calculation y/n ? `);
-        console.log(result2);
-        if(p==='y'){
-          array = [];
-          loop1();
-        }
-      }
-      function loop2(){
-        let num1 = prompt('Welcome to the calculator. Please enter a number. ');
-        array.push(num1);
-        let p = prompt(`You entered ${num1}. Enter another y/n? `);
-        if(p==='y')loop2();
-      }
-      function calc(){
-        let opp=prompt(`What operation would you like to perform +, -, *, / ? `);
-        let result1=0;
-        for(let i=0;i<array.length;i++){
-          if(i===0){
-            result1 = parseInt(array[i]);
-          }else{
-            if(opp==='+') result1 += parseInt(array[i]);
-            if(opp==='-') result1 -= parseInt(array[i]);
-            if(opp==='*') result1 *= parseInt(array[i]);
-            if(opp==='/'){
-               if(array.length>2) alert('Cannot use more than 2 numbers for division.');
-               if(array.length===2) result1 /= parseInt(array[i]);
-            }
-          }
-        }
-        return result1;
-      }
-    </script>
-    
     <div class="wrapper">
       <div class="boxStart">
         <p id="start"></p>
@@ -97,5 +54,47 @@
         <p><a href="index.html">Back to the Main Page</a>  <span style="float:right;">This page created as academic activity only.</span></p>
       </div>
     </div>
+    <script>
+      var array = new Array();
+      loop1();
+      alert('Reload page to perform calculations. Goodbye.');
+      
+      function loop1(){
+        loop2();
+        let more = prompt(`You entered `+array.length+` numbers, are there more y/n ? `);
+        if(more==='y')loop2();
+        let result2 = calc();
+        let p = prompt(`You entered `+array.length+` numbers. Your answer is ${result2}. Would you like to perform another calculation y/n ? `);
+        console.log(result2);
+        if(p==='y'){
+          array = [];
+          loop1();
+        }
+      }
+      function loop2(){
+        let num1 = prompt('Welcome to the calculator. Please enter a number. ');
+        array.push(num1);
+        let p = prompt(`You entered ${num1}. Enter another y/n? `);
+        if(p==='y')loop2();
+      }
+      function calc(){
+        let opp=prompt(`What operation would you like to perform +, -, *, / ? `);
+        let result1=0;
+        for(let i=0;i<array.length;i++){
+          if(i===0){
+            result1 = parseInt(array[i]);
+          }else{
+            if(opp==='+') result1 += parseInt(array[i]);
+            if(opp==='-') result1 -= parseInt(array[i]);
+            if(opp==='*') result1 *= parseInt(array[i]);
+            if(opp==='/'){
+               if(array.length>2) alert('Cannot use more than 2 numbers for division.');
+               if(array.length===2) result1 /= parseInt(array[i]);
+            }
+          }
+        }
+        return result1;
+      }
+    </script>
   </body>
 </html>
