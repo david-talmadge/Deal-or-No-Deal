@@ -53,13 +53,15 @@
           askAnotherQ();
       }
       function askAnotherQ(){
-            let input = prompt(`Would you like to ask another question y/n?`);
-            if(input==='y'||input==='Y'){
-              consultOracle();
-            }else if(input==='n'||input==='N'){
-            }else{
-              askAnotherQ();
-            }
+         let p = prompt(`Would you like to ask another question y/n?`);
+         if(p===null||p.toLowerCase()==='n'){
+         }else if(p===''){
+           askAnotherQ();
+         }else if(p.toLowerCase()==='y'){
+           consultOracle();
+         }else{
+           alert("Invalid Entry");
+         }
       }
       function selectAnswer(){
             let r = Math.floor(Math.random()*8)+1;
