@@ -37,7 +37,7 @@
         playAgainGG();
       }
       function playAgainGG(){
-         let p = prompt(`${uName}, would you like to play again, Yes or No?`);
+         let p = prompt(`${name}, would you like to play again, Yes or No?`);
          if(p===null||p.toLowerCase()==='no'){
          }else if(p===''){
            playAgainGG();
