@@ -34,8 +34,18 @@
             losses++;
           }
         alert(`That's ${wins} wins and ${losses} losses!`);
-        let shouldLoop = prompt('Would you like to play again y/n? ');
-        if(shouldLoop==='y') loopGuessingGame();
+        playAgainGG();
+      }
+      function playAgainGG(){
+         let p = prompt(`${uName}, would you like to play again, Yes or No?`);
+         if(p===null||p.toLowerCase()==='no'){
+         }else if(p===''){
+           playAgainGG();
+         }else if(p.toLowerCase()==='yes'){
+           loopGuessingGame();
+         }else{
+           alert("Invalid Entry");
+         }
       }
       function invalidInputCheck(g, a, b){
         let check = prompt(`Invalid input, expected: `+a+`/`+b+`.`);
