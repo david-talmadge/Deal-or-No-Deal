@@ -64,6 +64,53 @@
       function guessingGame(){
       }
       function consultOracle(){
+        loop1();
+        alert('Reload the page to ask more questions.');
+      }
+      function loop1(){
+            prompt(`The magic 8 ball is being shook... Ask a question you want answered: `);
+            alert(`The magic 8 ball has been shook. `+selectAnswer());
+            loop2();
+      }
+      function loop2(){
+            let input = prompt(`Would you like to ask another question y/n?`);
+            if(input==='y'||input==='Y'){
+            loop1();
+            }else if(input==='n'||input==='N'){
+            }else{
+              loop2();
+            }
+      }
+      function selectAnswer(){
+            let r = Math.floor(Math.random()*8)+1;
+            switch(r){
+              case 1:
+                return 'Ask again later';
+                break;
+              case 2:
+                return 'Most likely';
+                break;
+              case 3:
+                return 'My sources say no';
+                break;
+              case 4:
+                return 'Better not tell you now';
+                break;
+              case 5:
+                return 'Outlook good';
+                break;
+              case 6:
+                return 'Outlook not so good';
+                break;
+              case 7:
+                return 'Concentrate and ask again';
+                break;
+              case 8:
+                return 'Signs point to yes';
+                break;
+              default:
+                return 'Ask again later';
+            }
       }
       function bnh(){
       }
