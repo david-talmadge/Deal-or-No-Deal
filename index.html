@@ -15,19 +15,19 @@
         <p id="start"></p>
       </div>
       <div class="box1">
-        <p id="a1">Slot #</p>
+        <p id="a1"></p>
       </div>
       <div class="box2">
-        <p id="a2">Name</p>
+        <p id="a2"></p>
       </div>
       <div class="box3">
-        <p id="b0"></p>
+        <button id="b0" onclick="guessingGame();">Guessing Game</p>
       </div>
       <div class="box4">
-        <p id="c0"></p>
+        <button id="c0" onclick="consultOracle();">Consult the Oracle</p>
       </div>
       <div class="box5">
-        <p id="b1"></p>
+        <button id="b1" onclick="bnh();">Bear, Ninja, Hunter</p>
       </div>
       <div class="box6">
         <p id="c1"></p>
@@ -63,7 +63,6 @@
     <script>
       var array = ["Arnold", "Sly", "Dwayne", "Vin", "JCVD", "Steven"];
       loop1();
-      alert('Reload page to check other contacts. Goodbye.');
       
       function loop1(){
         let index = prompt('Please enter an entry number. ');
