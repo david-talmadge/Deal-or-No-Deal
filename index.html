@@ -61,10 +61,11 @@
       </div>
     </div>
     <script>
+      var name = '';
+      var wins = 0;
+      var losses = 0;
       function guessingGame(){
-        var name = prompt('Please enter your name. ');
-        var wins = 0;
-        var losses = 0;
+        name = prompt('Please enter your name. ');
         console.log(name);
         loopGuessingGame();
         alert('Reload page to play again. Goodbye.');
@@ -155,10 +156,10 @@
             }
       }
 
-      
+      var choices = ['Bear', 'Ninja', 'Hunter'];
+      var uName = '';
       function bnh(){
-        var choices = ['Bear', 'Ninja', 'Hunter'];
-        var uName = prompt('Welcome to Bear Hunter Ninja! Please enter your name to get started: ');
+        uName = prompt('Welcome to Bear Hunter Ninja! Please enter your name to get started: ');
         alert(`Hi ${uName} Let's Play!!`);
         loopBNH();
       }
