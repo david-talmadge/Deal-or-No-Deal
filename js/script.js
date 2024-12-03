@@ -228,5 +228,5 @@
             document.getElementById("d2-3").innerHTML = "Winrate: ";   
             document.getElementById("d2-4").innerHTML = totalGamesPlayed;
             document.getElementById("d2-5").innerHTML = wins;
-            document.getElementById("d2-3").innerHTML = percentWins + "%";
+            document.getElementById("d2-6").innerHTML = percentWins + "%";
       }
