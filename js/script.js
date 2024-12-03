@@ -223,5 +223,5 @@
       function displaySessionStats(){
             let totalGamesPlayed = wins+losses+ties;
             let percentWins = ((wins/(wins+losses+ties))*100).toFixed();
-            document.getElementById("c2").innerHTML = "Total games played: " + totalGamesPlayed + "<br>Total wins: " + wins + "<br>Winrate: " + percentWins;
+            document.getElementById("c2").innerHTML = "Total games played: " + totalGamesPlayed + "<br>Total wins: " + wins + "<br>Winrate: " + percentWins + "%";
       }
