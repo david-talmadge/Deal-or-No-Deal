@@ -217,6 +217,7 @@
             }
       }
       function displaySessionStats(){
+            let totalGamesPlayed = wins+losses;
             let percentWins = ((wins/(wins+losses))*100).toFixed();
-            
+            document.getElementById("c2").innerHTML = "Total games played: " + totalGamesPlayed + "<br>Total wins: " + wins + "<br>Winrate: " + percentWins;
       }
