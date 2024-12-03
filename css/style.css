@@ -1,7 +1,8 @@
 body {
   background-image: url("../images/index.jpg");
-  /*background-color: orange;*/
-  /*color:#361701;*/
+  background-color: #75b2c9;
+  
+  color: #75b2c9;
   font-family: "Josefin Sans", sans-serif;
   margin: 2px;
   padding: 2px;
@@ -20,7 +21,7 @@ h2, h3 {
 /*font-size:30px; */
 }
 p {
-  /*color:#361701;*/
+  color:#f5da42;
 }
 legend, fieldset {
   /*color: #361701;*/
@@ -140,6 +141,10 @@ legend, fieldset {
   grid-row: 9;
 }
 
+.resultsTable {
+   border: #f5da42;
+   color: #75b2c9;
+}
 div {
   /*border: double cornflowerblue;*/
 }
