@@ -223,10 +223,22 @@
       function displaySessionStats(){
             let totalGamesPlayed = wins+losses+ties;
             let percentWins = ((wins/(wins+losses+ties))*100).toFixed();
-            document.getElementById("d2-1").innerHTML = "Total games played: ";
+            let resultTable = `<table>
+            <tr>
+                  <th>Total Games Played</th>
+                  <th>Total Wins</th>
+                  <th>Winrate</th>
+            </tr>
+            <tr>
+                  <td>${totalGamesPlayed}</td>
+                  <td>${wins}</td>
+                  <td>${percentWins}%</td>`;
+            document.getElementById("d2").innerHTML = resultTable;
+            
+            /*document.getElementById("d2-1").innerHTML = "Total games played: ";
             document.getElementById("d2-2").innerHTML = "Total wins: ";   
             document.getElementById("d2-3").innerHTML = "Winrate: ";   
             document.getElementById("d2-4").innerHTML = totalGamesPlayed;
             document.getElementById("d2-5").innerHTML = wins;
-            document.getElementById("d2-6").innerHTML = percentWins + "%";
+            document.getElementById("d2-6").innerHTML = percentWins + "%";*/
       }
