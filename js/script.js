@@ -157,7 +157,7 @@
          }
       }
       function playAgain(){
-         let name = prompt(`${name}, would you like to play again, Yes or No?`);
+         let p = prompt(`${name}, would you like to play again, Yes or No?`);
          if(p===null||p.toLowerCase()==='no'){
          }else if(p===''){
            playAgain();
