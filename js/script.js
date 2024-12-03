@@ -1,11 +1,14 @@
       var name = '';
       var wins = 0;
       var losses = 0;
+      let ggWins = 0;
+      let ggLosses = 0;
       function guessingGame(){
         name = prompt('Please enter your name. ');
         console.log(name);
         loopGuessingGame();
-        alert('Reload page to play again. Goodbye.');
+        ggWins = 0;
+        ggLosses = 0;
       }
       
       function loopGuessingGame(){
@@ -28,12 +31,14 @@
           }
           if(input===output){
              alert(`${name}, you chose ${input}, the sum was ${sum}, which is an ${output} number, you win!`);
-            wins++;
+            ggWins++;
+                wins++;
           }else{
              alert(`${name}, you chose ${input}, the sum was ${sum}, which is an ${output} number, you lose!`);
-            losses++;
+            ggLosses++;
+                losses++;
           }
-        alert(`That's ${wins} wins and ${losses} losses!`);
+        alert(`That's ${ggWins} wins and ${ggLosses} losses!`);
         playAgainGG();
       }
       function playAgainGG(){
@@ -106,17 +111,16 @@
       }
 
       var choices = ['Bear', 'Ninja', 'Hunter'];
-      var uName = '';
       function bnh(){
-        uName = prompt('Welcome to Bear Hunter Ninja! Please enter your name to get started: ');
-        alert(`Hi ${uName} Let's Play!!`);
+        name = prompt('Welcome to Bear Hunter Ninja! Please enter your name to get started: ');
+        alert(`Hi ${name} Let's Play!!`);
         loopBNH();
       }
       function loopBNH(){
         let uType = checkType();
         if(uType!='cancel'){
           let sType = choices[Math.floor(Math.random()*choices.length)];
-          let uPrintedType = `${uName}, you chose ${uType}!`;
+          let uPrintedType = `${name}, you chose ${uType}!`;
           let sPrintedType = `The computer chose ${sType}!`;
           let result = selectResult(uType, sType);
           console.log(uPrintedType);
@@ -150,7 +154,7 @@
          }
       }
       function playAgain(){
-         let p = prompt(`${uName}, would you like to play again, Yes or No?`);
+         let name = prompt(`${name}, would you like to play again, Yes or No?`);
          if(p===null||p.toLowerCase()==='no'){
          }else if(p===''){
            playAgain();
