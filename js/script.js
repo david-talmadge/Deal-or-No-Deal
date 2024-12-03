@@ -40,6 +40,7 @@
           }
         alert(`That's ${ggWins} wins and ${ggLosses} losses!`);
         playAgainGG();
+        displaySessionStats();
       }
       function playAgainGG(){
          let p = prompt(`${name}, would you like to play again, Yes or No?`);
@@ -66,6 +67,7 @@
           prompt(`The magic 8 ball is being shook... Ask a question you want answered: `);
           alert(`The magic 8 ball has been shook. `+selectAnswer());
           askAnotherQ();
+          displaySessionStats();
       }
       function askAnotherQ(){
          let p = prompt(`Would you like to ask another question y/n?`);
@@ -129,6 +131,7 @@
           alert(uPrintedType + "\n" + sPrintedType + "\n" + result);
           playAgain();
         }
+        displaySessionStats();
       }
       function checkType(){
          let uType = prompt('Who are you: Bear, Ninja, or Hunter? ');
@@ -212,4 +215,8 @@
               default:
                 return 'You Tie.';
             }
+      }
+      function displaySessionStats(){
+            let percentWins = ((wins/(wins+losses))*100).toFixed();
+            
       }
