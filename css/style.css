@@ -15,8 +15,8 @@ h1 {
 }  
 h2, h3 {
   font-family: "Berkshire Swash", sans-serif;
-  /*color:#ffdfad;*/
-  text-shadow: 1px 1px 1px #361701;
+  color:#e3e156;
+  text-shadow: 1px 1px 1px #d6c040;
   font-style:oblique;
 /*font-size:30px; */
 }
@@ -142,8 +142,8 @@ legend, fieldset {
 }
 
 .resultsTable {
-   border: #f5da42;
-   color: #75b2c9;
+   border: #5896ad;
+   color: #f5da42;
 }
 div {
   /*border: double cornflowerblue;*/
