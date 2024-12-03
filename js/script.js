@@ -1,6 +1,7 @@
       var name = '';
       var wins = 0;
       var losses = 0;
+      var ties = 0;
       let ggWins = 0;
       let ggLosses = 0;
       function guessingGame(){
@@ -204,12 +205,15 @@
            }
            switch(result){
              case 'win':
+                  wins++;
                 return 'You Win!!';
                 break;
               case 'loss':
+                  losses++;
                 return 'You Lose.';
                 break;
               case 'tie':
+                  ties++;
                 return 'You Tie.';
                 break;
               default:
@@ -217,7 +221,7 @@
             }
       }
       function displaySessionStats(){
-            let totalGamesPlayed = wins+losses;
-            let percentWins = ((wins/(wins+losses))*100).toFixed();
+            let totalGamesPlayed = wins+losses+ties;
+            let percentWins = ((wins/(wins+losses+ties))*100).toFixed();
             document.getElementById("c2").innerHTML = "Total games played: " + totalGamesPlayed + "<br>Total wins: " + wins + "<br>Winrate: " + percentWins;
       }
