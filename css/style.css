@@ -8,14 +8,14 @@ body {
 }
 h1 {
   color:#e3e156;
-  text-shadow: 1px 1px 1px #d6c040;
+  text-shadow: 1px 1px 1px #d6bf3a;
   font-style:normal;
   text-align:right;
 }  
 h2, h3 {
   font-family: "Berkshire Swash", sans-serif;
   color:#e3e156;
-  text-shadow: 1px 1px 1px #d6c040;
+  text-shadow: 1px 1px 1px #d6bf3a;
   font-style:oblique;
 /*font-size:30px; */
 }
@@ -143,6 +143,12 @@ button {
    background-color: #75b2c9;
    border: 2px solid #f5da42;
    color: #f5da42;
+}
+button:active {
+  background-color: #6093a6;
+   border: 2px solid #d6bf3a;
+   color: #d6bf3a;
+  transform: translateY(4px);
 }
 .resultsTable {
    border: 2px solid #f5da42;
