@@ -141,11 +141,11 @@ legend, fieldset {
 }
 button {
    background-color: #75b2c9;
-   border: #f5da42;
+   border: 2px solid #f5da42;
    color: #f5da42;
 }
 .resultsTable {
-   border: #f5da42;
+   border: 2px solid #f5da42;
    color: #f5da42;
 }
 div {
