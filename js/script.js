@@ -241,7 +241,9 @@
             <tr align="center">
                   <td>${totalGamesPlayed}</td>
                   <td>${wins}</td>
-                  <td>${percentWins}%</td>`;
+                  <td>${percentWins}%</td>
+            </tr>
+            </table>`;
             document.getElementById("d2").innerHTML = resultTable;
             
             /*document.getElementById("d2-1").innerHTML = "Total games played: ";
