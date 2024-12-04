@@ -223,7 +223,7 @@
       function displaySessionStats(){
             let totalGamesPlayed = wins+losses+ties;
             let percentWins = ((wins/(wins+losses+ties))*100).toFixed();
-            let resultTable = `<table class="resultsTable">
+            let resultTable = `<table class="resultsTable" align="center">
             <tr>
                   <th>Total Games Played</th>
                   <th>Total Wins</th>
