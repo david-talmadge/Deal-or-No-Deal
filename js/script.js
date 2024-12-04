@@ -85,30 +85,39 @@
             let r = Math.floor(Math.random()*8)+1;
             switch(r){
               case 1:
+                        ties++;
                 return 'Ask again later';
                 break;
               case 2:
+                        wins++;
                 return 'Most likely';
                 break;
               case 3:
+                        losses++;
                 return 'My sources say no';
                 break;
               case 4:
+                        ties++;
                 return 'Better not tell you now';
                 break;
               case 5:
+                        wins++;
                 return 'Outlook good';
                 break;
               case 6:
+                        losses++;
                 return 'Outlook not so good';
                 break;
               case 7:
+                        ties++;
                 return 'Concentrate and ask again';
                 break;
               case 8:
+                        wins++;
                 return 'Signs point to yes';
                 break;
               default:
+                        ties++;
                 return 'Ask again later';
             }
       }
