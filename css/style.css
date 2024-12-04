@@ -118,8 +118,9 @@ button:active {
    color: #d6bf3a;
   transform: translateY(4px);
 }
-.resultsTable {
-   border: 2px solid #f5da42;
+table, th, td {
+  background-color: #75b2c9;
+  border: 2px solid #f5da42;
    color: #f5da42;
 }
 div {
