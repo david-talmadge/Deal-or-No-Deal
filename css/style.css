@@ -140,9 +140,13 @@ legend, fieldset {
   grid-column: 1/2;
   grid-row: 9;
 }
-
+.b1,.b2,.b3 {
+   background-color: #75b2c9;
+   border: #f5da42;
+   color: #f5da42;
+}
 .resultsTable {
-   border: #5896ad;
+   border: #f5da42;
    color: #f5da42;
 }
 div {
