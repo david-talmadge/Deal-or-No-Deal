@@ -22,7 +22,9 @@
             }else{ 
                   winnings += briefcaseValues[index];
                   button.innerHTML = briefcaseValues[index];
-                  briefcaseValues[index] = null;
+                  let sideBarValue = document.getElementById(briefcaseValues[index]);
+                  sideBarValue.innerHTML = '';
+                  briefcaseValues[index] = 0;
                   /*for(let value : briefcaseValues){
                         if(value!=null){
                               
@@ -35,7 +37,7 @@
             let cases = 0;
             let potentialValue = 0;
             for(let value : briefcaseValues){
-                  if(value!=null){
+                  if(value!=null&&value!=0){
                         potentialValue += value;  
                         cases++;
                   }
