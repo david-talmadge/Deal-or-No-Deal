@@ -32,8 +32,10 @@
                   briefcaseValues[index] = 0;
             }
             button.disabled = true;
+            brokerDeal();
       }
       function brokerDeal(){
+            alert(`The dealer has an offer for you`);
             let cases = 0;
             let potentialValue = 0;
             for(let value : briefcaseValues){
