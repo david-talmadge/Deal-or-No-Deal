@@ -192,6 +192,106 @@ legend, fieldset {
   grid-column: 1;
   grid-row: 1;
 }
+.s2 {
+  grid-column: 1;
+  grid-row: 2;
+}
+.s3 {
+  grid-column: 1;
+  grid-row: 3;
+}
+.s4 {
+  grid-column: 1;
+  grid-row: 4;
+}
+.s5 {
+  grid-column: 1;
+  grid-row: 5;
+}
+.s6 {
+  grid-column: 1;
+  grid-row: 6;
+}
+.s7 {
+  grid-column: 1;
+  grid-row: 7;
+}
+.s8 {
+  grid-column: 1;
+  grid-row: 8;
+}
+.s9 {
+  grid-column: 1;
+  grid-row: 9;
+}
+.s10 {
+  grid-column: 1;
+  grid-row: 10;
+}
+.s11 {
+  grid-column: 1;
+  grid-row: 11;
+}
+.s12 {
+  grid-column: 1;
+  grid-row: 12;
+}
+.s13 {
+  grid-column: 1;
+  grid-row: 13;
+}
+.s14 {
+  grid-column: 1;
+  grid-row: 14;
+}
+.s15 {
+  grid-column: 1;
+  grid-row: 15;
+}
+.s16 {
+  grid-column: 1;
+  grid-row: 16;
+}
+.s17 {
+  grid-column: 1;
+  grid-row: 17;
+}
+.s18 {
+  grid-column: 1;
+  grid-row: 18;
+}
+.s19 {
+  grid-column: 1;
+  grid-row: 19;
+}
+.s20 {
+  grid-column: 1;
+  grid-row: 20;
+}
+.s21 {
+  grid-column: 1;
+  grid-row: 21;
+}
+.s22 {
+  grid-column: 1;
+  grid-row: 22;
+}
+.s23 {
+  grid-column: 1;
+  grid-row: 23;
+}
+.s24 {
+  grid-column: 1;
+  grid-row: 24;
+}
+.s25 {
+  grid-column: 1;
+  grid-row: 25;
+}
+.s26 {
+  grid-column: 1;
+  grid-row: 26;
+}
 button {
    /*background-color: #75b2c9;
    border: 2px solid #f5da42;
