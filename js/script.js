@@ -18,7 +18,7 @@
             let button = document.getElementById(id);
             if(yourBriefcase===0){
                   yourBriefcase = briefcaseValues[index];
-                  briefcaseValues[index] = null;
+                  briefcaseValues[index] = 0;
             }else{ 
                   winnings += briefcaseValues[index];
                   button.innerHTML = briefcaseValues[index];
