@@ -38,7 +38,7 @@
             alert(`The dealer has an offer for you`);
             let cases = 0;
             let potentialValue = 0;
-            for(let value for briefcaseValues){
+            for(let value of briefcaseValues){
                   if(value!=null&&value!=0){
                         potentialValue += value;  
                         cases++;
