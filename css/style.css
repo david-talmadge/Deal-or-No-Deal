@@ -46,7 +46,7 @@ legend, fieldset {
 .wrapper-1 {
   grid-column: 1;
   grid-row: 1;
-  
+  border: 2px solid black;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-auto-rows: minmax(30px, auto);
@@ -68,7 +68,7 @@ legend, fieldset {
 .wrapper-3 {
   grid-column: 3;
   grid-row: 1;
-  
+  border: 2px solid black;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-auto-rows: minmax(30px, auto);
