@@ -1,25 +1,26 @@
 body {
-  background-color: #75b2c9;
+  /*background-color: #75b2c9;
   
-  color: #75b2c9;
+  color: #75b2c9;*/
   font-family: "Josefin Sans", sans-serif;
   margin: 2px;
   padding: 2px;
 }
 h1 {
-  color:#e3e156;
-  text-shadow: 1px 1px 1px #d6bf3a;
+  /*color:#e3e156;
+  text-shadow: 1px 1px 1px #d6bf3a;*/
   font-style:normal;
 }  
 h2, h3 {
   font-family: "Berkshire Swash", sans-serif;
-  color:#e3e156;
-  text-shadow: 1px 1px 1px #d6bf3a;
+  /*color:#e3e156;
+  text-shadow: 1px 1px 1px #d6bf3a;*/
   font-style:oblique;
 /*font-size:30px; */
 }
 p {
-  color:#f5da42;
+  border: 2px solid black;
+  /*color:#f5da42;*/
 }
 legend, fieldset {
   /*color: #361701;*/
@@ -304,9 +305,9 @@ button:active {
   transform: translateY(4px);*/
 }
 table, th, td {
-  background-color: #75b2c9;
+  /*background-color: #75b2c9;
   border: 2px solid #f5da42;
-   color: #f5da42;
+   color: #f5da42;*/
 }
 div {
   /*border: double cornflowerblue;*/
