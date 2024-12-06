@@ -23,7 +23,7 @@
             }else{ 
                   winnings += briefcaseValues[index];
                   button.innerHTML = briefcaseValues[index];
-                  for(int i=0;i<sideBarValues.length;i++){
+                  for(let i=0;i<sideBarValues.length;i++){
                         if(briefcaseValues[index]===briefcaseValues[i]){
                               let sideBar = document.getElementById('s'+(i+1));
                               sideBar.innerHTML = ' ';
