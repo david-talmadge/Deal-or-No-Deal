@@ -16,27 +16,28 @@
           }
       }
       function pickBriefcase(id){
-            let index = parseInt(id.substring(1))-1;
-            let button = document.getElementById(id);
-            if(yourBriefcase===0){
-                  yourBriefcase = briefcaseValues[index];
-                  briefcaseValues[index] = 0;
-            }else{ 
-                  winnings += briefcaseValues[index];
-                  button.innerHTML = briefcaseValues[index];
-                  for(let i=0;i<sideBarValues.length;i++){
-                        if(briefcaseValues[index]===briefcaseValues[i]){
-                              let sideBar = document.getElementById('s'+(i+1));
-                              sideBar.innerHTML = ' ';
+            if(gameOver===false){
+                  let index = parseInt(id.substring(1))-1;
+                  let button = document.getElementById(id);
+                  if(yourBriefcase===0){
+                        yourBriefcase = briefcaseValues[index];
+                        briefcaseValues[index] = 0;
+                  }else{ 
+                        winnings += briefcaseValues[index];
+                        button.innerHTML = briefcaseValues[index];
+                        for(let i=0;i<sideBarValues.length;i++){
+                              if(briefcaseValues[index]===briefcaseValues[i]){
+                                    let sideBar = document.getElementById('s'+(i+1));
+                                    sideBar.innerHTML = ' ';
+                              }
                         }
+                        briefcaseValues[index] = 0;
+                        brokerDeal();
                   }
-                  briefcaseValues[index] = 0;
-                  brokerDeal();
+                  button.disabled = true;
             }
-            button.disabled = true;
       }
       function brokerDeal(){
-            alert(`The dealer has an offer for you`);
             let cases = 0;
             let potentialValue = 0;
             for(let value of briefcaseValues){
@@ -45,19 +46,37 @@
                         cases++;
                   }
             }
+            if(cases===1){
+                  loopTrade();
+            }
+            if(cases===0){
+                  gameOver=true;
+            }
+            alert(`The dealer has an offer for you`);
             let offerValue = Math.floor(potentialValue*0.75319/cases);
+            loopDeal();
+            }
+      }
+      function loopTrade(){
+            let p = prompt(`Would you like to trade YOUR case for the last case yes/no?`).toLowerCase();
+            if(p==='no'){  
+            }else if (p==='yes'){
+                  alert(`You have won $${}`);
+                  gameOver=true;
+            }else{
+               loopTrade();   
+            }
+      }
+      function loopDeal(){
             let p = prompt(`The dealer has given you an offer of $${offerValue}, do you accept the deal yes/no?`).toLowerCase();
-            while(true){
-                  if(p==='no'){
-                        alert(`No Deal!`);
-                        break;
-                  }
-                  if (p==='yes'){
-                        alert(`Deal!`);
-                        alert(`You have won $${offerValue}`);
-                        gameOver=true;
-                        break;
-                  }
+            if(p==='no'){
+                   alert(`No Deal!`);
+            }else if (p==='yes'){
+                  alert(`Deal!`);
+                  alert(`You have won $${offerValue}`);
+                  gameOver=true;
+            }else{
+               loopDeal();   
             }
       }
       function displaySessionStats(){
