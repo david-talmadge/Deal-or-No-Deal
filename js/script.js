@@ -46,28 +46,28 @@
                         cases++;
                   }
             }
+            let offerValue = Math.floor(potentialValue*0.75319/cases);
             if(cases===1){
-                  loopTrade();
+                  loopTrade(offerValue);
             }
             if(cases===0){
                   gameOver=true;
             }
             alert(`The dealer has an offer for you`);
-            let offerValue = Math.floor(potentialValue*0.75319/cases);
-            loopDeal();
+            loopDeal(offerValue);
             }
       }
-      function loopTrade(){
+      function loopTrade(offerValue){
             let p = prompt(`Would you like to trade YOUR case for the last case yes/no?`).toLowerCase();
             if(p==='no'){  
             }else if (p==='yes'){
-                  alert(`You have won $${}`);
+                  alert(`You have won $${offerValue}`);
                   gameOver=true;
             }else{
                loopTrade();   
             }
       }
-      function loopDeal(){
+      function loopDeal(offerValue){
             let p = prompt(`The dealer has given you an offer of $${offerValue}, do you accept the deal yes/no?`).toLowerCase();
             if(p==='no'){
                    alert(`No Deal!`);
