@@ -44,7 +44,7 @@
                         cases++;
                   }
             }
-            let offerValue = Math.floor(potentialValue*0.9876543/cases);
+            let offerValue = Math.floor(potentialValue*0.75319/cases);
             let p = prompt(`The dealer has given you an offer of $${offerValue}, do you accept the deal yes/no?`).toLowerCase();
             while(true){
                   if(p==='no'){
