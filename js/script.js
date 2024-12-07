@@ -15,7 +15,7 @@
           }
       }
       function pickBriefcase(id){
-            let index = id.substring(1).parseInt()-1;
+            let index = parseInt(id.substring(1))-1;
             let button = document.getElementById(id);
             if(yourBriefcase===0){
                   yourBriefcase = briefcaseValues[index];
