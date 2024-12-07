@@ -5,8 +5,8 @@
       var gameOver = false;
       function dealOrNoDeal(){
             alert(`Welcome to Deal Or No Deal`);
-            scrambleArray(briefcaseValues);
             alert(`Pick YOUR briefcase`);
+            scrambleArray(briefcaseValues);
       }
       function scrambleArray(array) {
           for (let i=array.length-1; i>0; i--) {
@@ -30,9 +30,9 @@
                         }
                   }
                   briefcaseValues[index] = 0;
+                  brokerDeal();
             }
             button.disabled = true;
-            brokerDeal();
       }
       function brokerDeal(){
             alert(`The dealer has an offer for you`);
