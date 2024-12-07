@@ -60,6 +60,7 @@
       function loopTrade(offerValue){
             let p = prompt(`Would you like to trade YOUR case for the last case yes/no?`).toLowerCase();
             if(p==='no'){  
+                  alert(`Congradulations, your case's value is $`+(offerValue/0.75319));
             }else if (p==='yes'){
                   alert(`You have won $${offerValue}`);
                   gameOver=true;
